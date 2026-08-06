@@ -102,43 +102,26 @@ ul { list-style: none; }
   gap: 2rem;
 }
 
+/* Two logo lockups: white over dark backgrounds, colour over light ones */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-.logo-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: var(--white);
-  border: 1px solid rgba(9, 94, 83, 0.15);
-  display: grid;
-  place-items: center;
+  display: block;
+  position: relative;
+  line-height: 0;
   flex-shrink: 0;
-  overflow: hidden;
 }
-.logo-mark img { width: 34px; height: 34px; object-fit: contain; }
-.logo-text {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  transition: color 0.35s ease;
+.logo-img {
+  height: 46px;
+  width: auto;
+  transition: opacity 0.35s ease;
 }
-.logo-text em {
-  font-style: normal;
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 400;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  opacity: 0.85;
+.header .logo-img-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
-.header.is-scrolled .logo-text { color: var(--teal); }
+.header.is-scrolled .logo-img-white { opacity: 0; }
+.header.is-scrolled .logo-img-color { opacity: 1; }
 
 .nav {
   display: flex;
@@ -255,7 +238,7 @@ ul { list-style: none; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(4, 40, 35, 0.35) 0%, rgba(4, 40, 35, 0) 45%, rgba(4, 40, 35, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(4, 40, 35, 0.58) 0%, rgba(4, 40, 35, 0.22) 18%, rgba(4, 40, 35, 0) 45%, rgba(4, 40, 35, 0.4) 100%);
 }
 
 .hero-strip {
@@ -730,8 +713,7 @@ textarea { resize: vertical; }
   max-width: 300px;
   color: rgba(255, 255, 255, 0.65);
 }
-.logo-light .logo-mark { background: var(--white); border-color: transparent; }
-.logo-light .logo-text { color: var(--white); }
+.logo-light .logo-img { height: 52px; }
 .footer-col h4 {
   font-family: var(--font-display);
   color: var(--gold);
@@ -808,6 +790,8 @@ textarea { resize: vertical; }
   .nav .nav-cta:hover,
   .header:not(.is-scrolled) .nav .nav-cta:hover { background: var(--teal); color: var(--white); }
   .nav-toggle { display: flex; }
+  .logo-img { height: 38px; }
+  .logo-light .logo-img { height: 44px; }
 
   .hero-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; padding: 1rem 0; }
   .hero-scroll { display: none; }

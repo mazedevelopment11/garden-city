@@ -357,126 +357,43 @@ ul { list-style: none; }
 
 .project-card {
   flex: 0 0 calc((100% - 4.8rem) / 4); /* 4 per view, 3 gaps of 1.6rem */
-  background: var(--white);
+  position: relative;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 8px 28px rgba(4, 48, 42, 0.07);
+  box-shadow: 0 8px 28px rgba(4, 48, 42, 0.14);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  display: flex;
-  flex-direction: column;
 }
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow);
 }
 .project-media {
-  position: relative;
-  height: 190px;
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
+  transition: transform 0.7s ease;
 }
-.project-media::after {
-  content: "";
+.project-card:hover .project-media { transform: scale(1.07); }
+
+.project-overlay {
   position: absolute;
   inset: auto 0 0 0;
-  height: 46%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 160' preserveAspectRatio='none'%3E%3Cpath fill='rgba(4,40,35,0.4)' d='M0 160 L0 120 L50 120 L50 80 L90 80 L90 120 L150 120 L150 60 L180 60 L180 40 L210 40 L210 60 L240 60 L240 120 L320 120 L320 90 L390 90 L390 130 L450 130 L450 70 L480 70 L480 50 L520 50 L520 70 L550 70 L550 130 L630 130 L630 100 L700 100 L700 130 L760 130 L760 110 L800 110 L800 160 Z'/%3E%3C/svg%3E");
-  background-size: cover;
-  background-position: bottom;
-}
-/* Placeholder gradients — replaced by real photos via images/projects/<name>.jpg */
-.media-1 {
-  background:
-    radial-gradient(600px 260px at 70% 20%, rgba(200, 169, 98, 0.4), transparent 65%),
-    linear-gradient(150deg, rgb(12, 110, 96), rgb(6, 62, 54));
-}
-.media-2 {
-  background:
-    radial-gradient(600px 260px at 25% 25%, rgba(200, 169, 98, 0.36), transparent 65%),
-    linear-gradient(200deg, rgb(10, 96, 84), rgb(4, 50, 44));
-}
-.media-3 {
-  background:
-    radial-gradient(600px 280px at 55% 15%, rgba(140, 200, 190, 0.3), transparent 65%),
-    linear-gradient(160deg, rgb(8, 88, 78), rgb(5, 56, 49));
-}
-.media-4 {
-  background:
-    radial-gradient(620px 260px at 45% 22%, rgba(200, 169, 98, 0.45), transparent 65%),
-    linear-gradient(140deg, rgb(11, 102, 90), rgb(6, 60, 52));
-}
-.media-5 {
-  background:
-    radial-gradient(600px 260px at 80% 30%, rgba(200, 169, 98, 0.32), transparent 65%),
-    linear-gradient(170deg, rgb(9, 92, 80), rgb(5, 52, 46));
-}
-.media-6 {
-  background:
-    radial-gradient(600px 260px at 30% 15%, rgba(140, 200, 190, 0.26), transparent 65%),
-    linear-gradient(150deg, rgb(11, 106, 92), rgb(6, 58, 50));
-}
-.media-7 {
-  background:
-    radial-gradient(620px 280px at 60% 25%, rgba(200, 169, 98, 0.42), transparent 65%),
-    linear-gradient(195deg, rgb(10, 98, 86), rgb(4, 46, 40));
-}
-.project-tag {
-  position: absolute;
-  top: 1rem; left: 1rem;
-  z-index: 2;
-  background: rgba(247, 245, 240, 0.94);
-  color: var(--teal);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-}
-.project-body {
-  padding: 1.7rem 1.8rem 1.9rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.project-city {
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--gold);
-  margin-bottom: 0.35rem;
+  padding: 1.7rem 1.4rem 1.4rem;
+  background: linear-gradient(to top, rgba(4, 32, 28, 0.92) 0%, rgba(4, 32, 28, 0.55) 55%, rgba(4, 32, 28, 0) 100%);
 }
 .project-name {
   font-family: var(--font-display);
-  font-size: 1.45rem;
-  color: var(--teal-deeper);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: var(--white);
   margin-bottom: 0.6rem;
 }
-.project-desc {
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 1.1rem;
-  flex: 1;
-}
-.project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.3rem;
-}
-.project-meta li {
-  font-size: 0.76rem;
-  letter-spacing: 0.05em;
-  color: var(--teal);
-  background: var(--teal-soft);
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;
-}
 .project-link {
-  color: var(--teal);
+  color: var(--gold);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;

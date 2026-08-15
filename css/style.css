@@ -356,7 +356,7 @@ ul { list-style: none; }
 .carousel-next { right: 0; }
 
 .project-card {
-  flex: 0 0 calc((100% - 4.8rem) / 4); /* 4 per view, 3 gaps of 1.6rem */
+  flex: 0 0 calc((100% - 3.2rem) / 3); /* 3 per view, 2 gaps of 1.6rem */
   position: relative;
   aspect-ratio: 3 / 4;
   border-radius: var(--radius);
@@ -680,13 +680,12 @@ textarea { resize: vertical; }
 /* =========================================================
    Responsive
    ========================================================= */
-@media (max-width: 1200px) {
-  .project-card { flex-basis: calc((100% - 3.2rem) / 3); } /* 3 per view */
+@media (max-width: 1100px) {
+  .project-card { flex-basis: calc((100% - 1.6rem) / 2); } /* 2 per view */
 }
 
 @media (max-width: 1024px) {
   .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-card { flex-basis: calc((100% - 1.6rem) / 2); } /* 2 per view */
   .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
   .about-photo { height: 380px; }
   .about-badge { right: 1rem; }

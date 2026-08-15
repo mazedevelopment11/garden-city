@@ -168,6 +168,36 @@ const counterObserver = new IntersectionObserver(
 );
 document.querySelectorAll('[data-count]').forEach((el) => counterObserver.observe(el));
 
+// ---------- Footer project hover preview ----------
+const previewEl = document.getElementById('projectPreview');
+const previewImg = document.getElementById('projectPreviewImg');
+const previewName = document.getElementById('projectPreviewName');
+const previewLinks = document.querySelectorAll('.project-preview-link');
+
+const PREVIEW_OFFSET = 18;
+const positionPreview = (e) => {
+  const w = previewEl.offsetWidth;
+  const h = previewEl.offsetHeight;
+  let x = e.clientX + PREVIEW_OFFSET;
+  let y = e.clientY + PREVIEW_OFFSET;
+  if (x + w > window.innerWidth - 12) x = e.clientX - w - PREVIEW_OFFSET;
+  if (y + h > window.innerHeight - 12) y = e.clientY - h - PREVIEW_OFFSET;
+  previewEl.style.transform = `translate(${x}px, ${y}px)`;
+};
+
+previewLinks.forEach((link) => {
+  link.addEventListener('mouseenter', () => {
+    previewImg.src = link.dataset.previewImg;
+    previewImg.alt = link.textContent;
+    previewName.textContent = link.textContent;
+    previewEl.classList.add('is-visible');
+  });
+  link.addEventListener('mousemove', positionPreview);
+  link.addEventListener('mouseleave', () => {
+    previewEl.classList.remove('is-visible');
+  });
+});
+
 // ---------- Contact form ----------
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');

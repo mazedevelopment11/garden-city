@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/style.css?v=12" />
 </head>
 <body>
 
@@ -306,16 +306,16 @@
       </div>
       <div class="footer-col">
         <h4>Projects</h4>
-        <a href="#projects">Garden City Baghdad</a>
-        <a href="#projects">Garden City Avenue</a>
-        <a href="#projects">Garden Complex</a>
-        <a href="#projects">Garden City Kirkuk 1</a>
-        <a href="#projects">Garden City Kirkuk 2</a>
-        <a href="#projects">Garden City Kirkuk Tower</a>
-        <a href="#projects">Garden City Ramadi</a>
-        <a href="#projects">Garden City Towers</a>
-        <a href="#projects">Garden City Slemani Apartments</a>
-        <a href="#projects">Garden City Slemani Villas</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-baghdad.jpg">Garden City Baghdad</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-avenue.jpg">Garden City Avenue</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-complex.jpg">Garden Complex</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-kirkuk.jpg">Garden City Kirkuk 1</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-kirkuk-villas.jpg">Garden City Kirkuk 2</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-kirkuk-tower.jpg">Garden City Kirkuk Tower</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-ramadi.jpg">Garden City Ramadi</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-towers.jpg">Garden City Towers</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-slemani-apartments.jpg">Garden City Slemani Apartments</a>
+        <a href="#projects" class="project-preview-link" data-preview-img="images/projects/garden-city-slemani-villas.jpg">Garden City Slemani Villas</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
@@ -339,6 +339,11 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3"></script>
+  <div class="project-preview" id="projectPreview" aria-hidden="true">
+    <img id="projectPreviewImg" src="" alt="" />
+    <span id="projectPreviewName"></span>
+  </div>
+
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

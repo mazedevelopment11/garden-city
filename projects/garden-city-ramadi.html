@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden City Ramadi — Garden City Properties</title>
+  <meta name="description" content="Garden City Ramadi — a Garden City Properties development in Iraq." />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=14" />
+</head>
+<body data-project="garden-city-ramadi">
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Garden City Properties — home">
+        <img src="../images/logo-white.png" alt="Garden City Properties" class="logo-img logo-img-white" width="620" height="180" />
+        <img src="../images/logo-color.png" alt="" aria-hidden="true" class="logo-img logo-img-color" width="620" height="180" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#projects" class="nav-link project-preview-link active" data-preview-img="../images/projects/garden-city-baghdad.jpg">Projects</a>
+        <a href="../index.html#about" class="nav-link">About Us</a>
+        <a href="../index.html#why-us" class="nav-link">Why Us</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+        <a href="../index.html#contact" class="btn btn-outline nav-cta">Enquire Now</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Title band ===== -->
+  <section class="detail-title-band">
+    <div class="container">
+      <p class="detail-breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#projects">Projects</a> / <span data-fill="name">Project</span></p>
+      <p class="detail-city" data-fill="city">City</p>
+      <h1 class="detail-title" data-fill="name">Project Name</h1>
+    </div>
+  </section>
+
+  <!-- ===== Video ===== -->
+  <section class="detail-block">
+    <div class="container">
+      <div class="detail-block-head">
+        <p class="section-eyebrow">Watch</p>
+        <h2 class="section-title">Project Video</h2>
+      </div>
+      <div class="detail-video-frame">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <p class="detail-note">Placeholder video — swap in the real project walkthrough any time.</p>
+    </div>
+  </section>
+
+  <!-- ===== Site Plan ===== -->
+  <section class="detail-block">
+    <div class="container">
+      <div class="detail-block-head">
+        <p class="section-eyebrow">Master Plan</p>
+        <h2 class="section-title">Site Plan</h2>
+      </div>
+      <div class="detail-siteplan-frame">
+        <img src="../images/siteplan-placeholder.svg" alt="Indicative site plan placeholder" />
+      </div>
+      <p class="detail-note">Placeholder site plan — final master plan to be added.</p>
+    </div>
+  </section>
+
+  <!-- ===== Types ===== -->
+  <section class="detail-block">
+    <div class="container">
+      <div class="detail-block-head">
+        <p class="section-eyebrow">Unit Mix</p>
+        <h2 class="section-title">Types</h2>
+      </div>
+      <div class="types-grid" id="typesGrid"></div>
+      <p class="detail-note">Sample layouts — final unit mix and sizes to be confirmed.</p>
+    </div>
+  </section>
+
+  <!-- ===== Gallery + Description ===== -->
+  <section class="detail-block">
+    <div class="container">
+      <div class="detail-block-head">
+        <p class="section-eyebrow">Gallery</p>
+        <h2 class="section-title">About This Project</h2>
+      </div>
+      <div class="detail-gallery-grid">
+        <div class="detail-gallery-media">
+          <img id="galleryImg" src="" alt="" />
+        </div>
+        <div class="detail-description" id="projectDescription"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="detail-cta">
+    <div class="container">
+      <h2>Interested in <span data-fill="name">this project</span>?</h2>
+      <a href="../index.html#contact" class="btn btn-primary">Speak to an Advisor</a>
+    </div>
+  </section>
+
+  <!-- ===== Other Projects ===== -->
+  <section class="section" style="padding-top: 3.6rem;">
+    <div class="container">
+      <div class="detail-block-head" style="text-align:center; max-width:none;">
+        <p class="section-eyebrow" style="text-align:center;">Explore More</p>
+        <h2 class="section-title" style="text-align:center;">Other Garden City Projects</h2>
+      </div>
+      <div class="other-projects-grid" id="otherProjects"></div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo logo-light">
+          <img src="../images/logo-white.png" alt="Garden City Properties" class="logo-img" width="620" height="180" />
+        </a>
+        <p>Master-planned communities across Iraq — built with pride, delivered with trust.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <a href="garden-city-baghdad.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-baghdad.jpg">Garden City Baghdad</a>
+        <a href="garden-city-avenue.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-avenue.jpg">Garden City Avenue</a>
+        <a href="garden-complex.html" class="project-preview-link" data-preview-img="../images/projects/garden-complex.jpg">Garden Complex</a>
+        <a href="garden-city-kirkuk.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-kirkuk.jpg">Garden City Kirkuk 1</a>
+        <a href="garden-city-kirkuk-villas.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-kirkuk-villas.jpg">Garden City Kirkuk 2</a>
+        <a href="garden-city-kirkuk-tower.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-kirkuk-tower.jpg">Garden City Kirkuk Tower</a>
+        <a href="garden-city-ramadi.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-ramadi.jpg">Garden City Ramadi</a>
+        <a href="garden-city-towers.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-towers.jpg">Garden City Towers</a>
+        <a href="garden-city-slemani-apartments.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-slemani-apartments.jpg">Garden City Slemani Apartments</a>
+        <a href="garden-city-slemani-villas.html" class="project-preview-link" data-preview-img="../images/projects/garden-city-slemani-villas.jpg">Garden City Slemani Villas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../index.html#about">About Us</a>
+        <a href="../index.html#why-us">Why Garden City</a>
+        <a href="../index.html#contact">Careers</a>
+        <a href="../index.html#contact">News</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+9647700000000">+964 770 000 0000</a>
+        <a href="mailto:info@gardencity-iq.com">info@gardencity-iq.com</a>
+        <span>Al-Mansour, Baghdad, Iraq</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2026 Garden City Properties. All rights reserved.</span>
+        <span class="footer-credit">Developed by <a href="https://www.halabjagroup.com" target="_blank" rel="noopener">Halabja Group</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="project-preview" id="projectPreview" aria-hidden="true">
+    <img id="projectPreviewImg" src="" alt="" />
+    <span id="projectPreviewName"></span>
+  </div>
+
+  <script src="../js/site.js?v=1"></script>
+  <script src="../js/projects-data.js?v=1"></script>
+  <script src="../js/project-page.js?v=1"></script>
+</body>
+</html>

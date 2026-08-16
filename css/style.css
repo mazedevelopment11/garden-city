@@ -598,7 +598,7 @@ ul { list-style: none; }
 .iraq-map-wrap {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 360px;
   margin: 2rem auto 0;
 }
 .iraq-map {
@@ -607,11 +607,19 @@ ul { list-style: none; }
   display: block;
 }
 .iraq-map path {
-  fill: var(--teal-soft);
-  stroke: var(--teal);
-  stroke-width: 2.5;
+  fill: var(--teal);
+  stroke: var(--white);
+  stroke-width: 3;
   stroke-linejoin: round;
 }
+.map-credit {
+  text-align: center;
+  margin-top: 0.9rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.map-credit a { color: var(--muted); text-decoration: underline; }
+.map-credit a:hover { color: var(--teal); }
 .map-marker {
   position: absolute;
   transform: translate(-50%, -50%);

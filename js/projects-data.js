@@ -133,6 +133,8 @@ window.GARDEN_CITY_PROJECTS = {
     name: "Garden City Towers",
     city: "Baghdad",
     image: "../images/projects/garden-city-towers.jpg",
+    video: { youtubeId: "r7GVhcLoBFI" },
+    siteplan: "../images/projects/garden-city-towers-siteplan.jpg",
     description: [
       "Garden City Towers is a landmark twin-tower residential development, designed to be visible from across the surrounding district.",
       "The two towers rise side by side above a shared landscaped podium, framing a green entrance boulevard between them.",
@@ -142,9 +144,12 @@ window.GARDEN_CITY_PROJECTS = {
       "Garden City Towers is designed as a statement address — twin landmarks that anchor the wider Garden City brand in the city."
     ],
     types: [
-      { label: "Type A", beds: "1 Bedroom", size: "78 – 92 m²" },
-      { label: "Type B", beds: "2 Bedroom", size: "115 – 138 m²" },
-      { label: "Type C", beds: "3 Bedroom Duplex", size: "195 – 230 m²" }
+      { label: "Type A", beds: "4 Bedroom (4+1)", size: "285 m²" },
+      { label: "Type A", beds: "3 Bedroom (3+1)", size: "214 m²" },
+      { label: "Type A", beds: "2 Bedroom (2+1)", size: "162 m²" },
+      { label: "Type B", beds: "3 Bedroom (3+1)", size: "222 m²" },
+      { label: "Type B", beds: "2 Bedroom (2+1)", size: "158 m²" },
+      { label: "Type C", beds: "3 Bedroom (3+1)", size: "212 m²" }
     ]
   },
   "garden-city-slemani-apartments": {

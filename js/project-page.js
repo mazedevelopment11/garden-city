@@ -22,6 +22,27 @@
     galleryImg.alt = data.name;
   }
 
+  // Optional per-project video override (YouTube, autoplay muted loop, no placeholder note)
+  const videoFrame = document.querySelector('.detail-video-frame');
+  if (videoFrame && data.video && data.video.youtubeId) {
+    const id = data.video.youtubeId;
+    videoFrame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&disablekb=1" title="${data.name} video" allow="autoplay; encrypted-media" frameborder="0"></iframe>`;
+    const note = videoFrame.nextElementSibling;
+    if (note && note.classList.contains('detail-note')) note.remove();
+  }
+
+  // Optional per-project site plan override (drops the placeholder note when real art is provided)
+  const siteplanFrame = document.querySelector('.detail-siteplan-frame');
+  if (siteplanFrame && data.siteplan) {
+    const img = siteplanFrame.querySelector('img');
+    if (img) {
+      img.src = data.siteplan;
+      img.alt = `${data.name} site plan`;
+    }
+    const note = siteplanFrame.nextElementSibling;
+    if (note && note.classList.contains('detail-note')) note.remove();
+  }
+
   const descWrap = document.getElementById('projectDescription');
   if (descWrap) {
     descWrap.innerHTML = '';
